@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
+/* Navbar */
 .navbar {
     background-color: #ffffff;
     width: 100%;
@@ -28,7 +28,6 @@ body {
 }
 
 .logo {
-
     font-size: 2.1rem;
     font-weight: bold;
     margin-left: 180px;
@@ -53,22 +52,14 @@ body {
 .nav-btn button {
     width: 170px;
     height: 40px;
-
     color: #ffffff;
     background-color: #0095DA;
     border-radius: 21px;
     border: none;
 }
 
-
-
 /* Section */
-
-/* Section Styling */
-
-
 .custom-section {
-
     height: 580px;
     width: 100%;
     margin: 0 auto;
@@ -146,7 +137,6 @@ body {
     color: white;
 }
 
-
 /* Footer Styling */
 .footer {
     display: flex;
@@ -154,7 +144,6 @@ body {
 }
 
 .custom-footer {
-
     width: 99.4%;
     height: 50px;
     background-color: #f1f1f1;
@@ -171,7 +160,128 @@ body {
     position: fixed;
     bottom: 0;
     margin-bottom: 5px;
-
 }
 
-/* Responsive */
+/* Media Queries */
+
+/* For small devices like phones (max-width: 600px) */
+@media (max-width: 600px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        margin-left: 20px;
+    }
+
+    .nav-btn {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .custom-section {
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    .custom-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        margin: 0 10px;
+    }
+}
+
+/* For tablets and small desktops (min-width: 601px and max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navbar-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+
+    .nav-btn {
+        margin-right: 20px;
+    }
+
+    .cards-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 220px;
+        height: 350px;
+    }
+
+    .custom-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .custom-section .content {
+        margin-bottom: 20px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        margin: 0 12px;
+    }
+}
+
+/* For large desktops and larger (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .navbar-container {
+        width: 1440px;
+    }
+
+    .logo {
+        font-size: 2.1rem;
+        margin-left: 180px;
+    }
+
+    .nav-btn {
+        margin-right: 180px;
+    }
+
+    .cards-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        width: 80%;
+        max-width: 1440px;
+    }x
+
+    .card {
+        width: 250px;
+        height: 370px;
+    }
+
+    .custom-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .custom-section {
+        padding: 20px 0;
+    }
+}
